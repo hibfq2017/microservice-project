@@ -12,6 +12,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @RestController
+
 @RequestMapping("/api/config")
 public class CommandeConfigController {
 
@@ -27,5 +28,6 @@ public class CommandeConfigController {
                 LocalDate startDate = LocalDate.now().minusDays(lastDays); // Calculate the start date
                 return commandeService.findCommandesFromDate(startDate); // Fetch commandes from the database
         }
+
 }
 
